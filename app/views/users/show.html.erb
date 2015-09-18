@@ -1,0 +1,20 @@
+<%= @user.fname %>
+<%= @user.lname %>
+<%= @user.email %>
+<%= @user.username %>
+
+<% if current_user and @user == current_user %>
+    <p><%= link_to "edit profile", edit_user_path(@user) %></p>
+<% end %>
+
+<br>
+
+<h3><%= link_to "Close Your Account", @user, method: :delete, data: {confirm: "Are you sure?"} %></h3>
+
+<!-- Users Posts w/ Other Users Comments -->
+<h1> <%= @user.username %>'s Posts </h1>
+<ol>
+<% @user.posts.each do |post| %>
+  <li> <%= post.body %> </li>
+<%end%>
+</ol>
