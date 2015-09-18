@@ -10,10 +10,12 @@
 		<%= f.text_field :lname %>
 	</p>
 
+	<% if @user.new_record?%>
 	<p>
 		<%= f.label :password %>
 		<%= f.password_field :password %>
 	</p>
+	<% end %>
 
 	<p>
 		<%= f.label :username %>

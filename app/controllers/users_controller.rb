@@ -12,6 +12,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @posts = Post.all
+    @comment = Comment.all
   end
 
   def edit
@@ -25,7 +27,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     session[:user_id] = @user.id
-    redirect_to posts_index, notice: "New account created!"
+    redirect_to posts_path, notice: "New account created!"
   end
 
   def update

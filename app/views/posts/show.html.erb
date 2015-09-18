@@ -3,11 +3,13 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.body %></p>
 
-<h3>New Comment</h3>
-<%= form_for [@post, @comment] do |f| %>
-    <%= f.text_area :body %><br>
-    <%= f.submit %>
-<%end%>
+<% if current_user != nil %>
+	<h3>New Comment</h3>
+	<%= form_for [@post, @comment] do |f| %>
+	    <%= f.text_area :body %><br>
+	    <%= f.submit %>
+	<%end%>
+<% end %>
 
 
 <h3>Comments</h3>

@@ -9,7 +9,9 @@
 
 <br>
 
-<h3><%= link_to "Close Your Account", @user, method: :delete, data: {confirm: "Are you sure?"} %></h3>
+<% if current_user and @user == current_user %>
+	<h3><%= link_to "Close Your Account", @user, method: :delete, data: {confirm: "Are you sure?"} %></h3>
+<% end %>
 
 <!-- Users Posts w/ Other Users Comments -->
 <h1> <%= @user.username %>'s Posts </h1>
@@ -18,3 +20,5 @@
   <li> <%= post.body %> </li>
 <%end%>
 </ol>
+
+
