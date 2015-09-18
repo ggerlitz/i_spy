@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
- before_action :set_post, only: [:show, :edit, :update, :destroy]
- before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+ before_action :set_post, only: [:show, :edit, :update, :destroy, :avatar]
+ before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :avatar]
 
  def index
-  @posts = Post.all
+  @posts = Post.last(10).reverse
  end
 
  def new
@@ -37,7 +37,7 @@ end
  private
 
 	def posts_params
-		params.require(:post).permit(:body, :title).merge(user: current_user)
+		params.require(:post).permit(:body, :title, :avatar).merge(user: current_user)
 	end
 
   def set_post
