@@ -3,7 +3,7 @@ class PostsController < ApplicationController
  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :avatar]
 
  def index
-  @posts = Post.all
+  @posts = Post.last(10).reverse
  end
 
  def new

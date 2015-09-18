@@ -1,6 +1,6 @@
 <%= form_for @post, html: { multipart: true } do |f| %>
 	<p><%= f.label :title, "Upload an Image" %>
-		<%= f.file_field :avatar %>
+		<%= f.file_field :avatar, required: true %>
 	</p>
   <p><%= f.label :title %>
       <%= f.text_field :title %>
