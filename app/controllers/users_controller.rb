@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :destroy, :update, :follow, :unfollow]
-  before_action :authenticate_user!, only: [:profile, :destroy, :edit, :update, :follow, :unfollow]
+  before_action :set_user, only: [:show, :edit, :destroy, :update, :follow, :unfollow, :avatar]
+  before_action :authenticate_user!, only: [:profile, :destroy, :edit, :update, :follow, :unfollow, :avatar]
   before_action :authorize_user, only: [:destroy, :edit, :update]
 
   def index
@@ -50,7 +50,7 @@ class UsersController < ApplicationController
    end
 
   def user_params
-  	params.require(:user).permit(:username, :email, :password, :fname, :lname)
+  	params.require(:user).permit(:username, :email, :password, :fname, :lname, :avatar)
   end
 
   def set_user
