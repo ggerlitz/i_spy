@@ -12,6 +12,6 @@ resources :users
 resources :posts do
  resources :comments, shallow: true, only:[:create, :destroy]
 end
-root 'posts#index'
+root 'home#index'
 
 end

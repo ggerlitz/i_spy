@@ -11,10 +11,11 @@ class PostsController < ApplicationController
  end
 
 def edit
- end
+end
 
  def show
  	@user = current_user
+  @posts = Post.all
   @comment = Comment.new
  end
 
@@ -36,7 +37,7 @@ def edit
  private
 
 	def posts_params
-		params.require(:post).permit(:body).merge(user: current_user)
+		params.require(:post).permit(:body, :title).merge(user: current_user)
 	end
 
   def set_post
