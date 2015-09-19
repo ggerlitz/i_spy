@@ -1,39 +1,62 @@
-<div class="tile">
-	
-	<div class="container">
-		<div class="tileContentTop">
-			<h3>@<%= link_to @post.user.username, @post %></h3>
-		</div>
-		
-		<div class="tileImage">
-			<%= image_tag @post.avatar.url(:medium) %>
-		</div>
 
-		<div class="tileContent">
-			<h4><%= @post.title %></h4>
-			<p><%= @post.body %></p>
-		</div>
+<div class="masterside">
+	<div class="sidebar">
+
+			<div class="bio">
+				<div class="bioTop">
+					<p><%= @post.user.username %></p>
+				</div>
+
+				<div class="bioBottom">
+					<p><%= @post.user.fname %></p>
+					<p><%= @post.user.lname %></p>
+					<p><%= @post.user.email %></p>
+				</div>
+			</div>
+
 	</div>
-<div class="editPost">
-	<%if current_user and current_user.id == @post.user_id %>
-	<%= link_to 'Edit Post', edit_post_path(@post) %>
-	<%end%>
 </div>
+<div class="main">
+	<div class="postTile">
+		
+		<div class="container">
 
-</div>
+			<div class="tileContentTop">
+				<h3>@<%= link_to @post.user.username, @post %></h3>
+			</div>
+			
+			<div class="tileImage">
+				<%= image_tag @post.avatar.url(:medium) %>
+			</div>
+
+			<div class="tileContent">
+				<h4><%= @post.title %></h4>
+				<p><%= @post.body %></p>
+			</div>
+
+		</div>
+
+			<div class="editPost">
+				<%if current_user and current_user.id == @post.user_id %>
+				<%= link_to 'Edit Post', edit_post_path(@post) %>
+				<%end%>
+			</div>
+
+	</div>
+
+	<div class="comments">
+		<% if current_user != nil %>
+			<h3>New Comment</h3>
+			<%= form_for [@post, @comment] do |f| %>
+			    <%= f.text_area :body %><br>
+			    <%= f.submit %>
+			<%end%>
+		<% end %>   
+	</div>
+
+</div>	
 
 
-<% if current_user != nil %>
-	<h3>New Comment</h3>
-	<%= form_for [@post, @comment] do |f| %>
-	    <%= f.text_area :body %><br>
-	    <%= f.submit %>
-	<%end%>
-<% end %>
 
 
-<h3>Comments</h3>
-<% @post.comments.each do |comment| %>
-    <p><%= comment.body %></p>
-    <hr>
-<% end %>
+
