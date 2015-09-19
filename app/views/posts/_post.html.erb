@@ -1,8 +1,17 @@
-<h3><%= link_to post.user.username, post %></h3>
-<h4><%= post.title %></h4>
-<%= image_tag post.avatar.url(:medium) %>
-<p><%= post.body %></p>
-<%if current_user and current_user.id == post.user_id %>
-<%= link_to 'Edit Post', edit_post_path(post) %>
-<%end%>
-<hr>
+<div class="tile">
+	
+	<div class="container">
+		<div class="tileContentTop">
+			<h3>@<%= link_to post.user.username, post %></h3>
+		</div>
+		
+		<div class="tileImage">
+			<%= image_tag post.avatar.url(:medium) %>
+		</div>
+
+		<div class="tileContent">
+			<h4><%= post.title %></h4>
+			<p><%= post.body %></p>
+		</div>
+	</div>
+</div>

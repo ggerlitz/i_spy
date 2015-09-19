@@ -13,3 +13,115 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+	margin: 0 auto;
+	background-color: #7ECCC4;
+}
+
+header{
+	width: 100%;
+	border-bottom: solid black 1px;
+	padding: .6em;
+	background-color: white;
+}
+
+nav{
+	font-family: 'Roboto', sans-serif;
+}
+
+#logo{
+	display: inline-block;
+	margin: 0;
+	margin-top: .2em;
+}
+
+#navBar{
+	display: inline-block;
+	margin-top: 3.4em;
+	margin-right: 1em;
+	float: right;
+}
+
+nav a{
+	letter-spacing: .1em;
+	padding-left: .4em;
+	text-decoration: none;
+	color: inherit;
+}
+
+h1, h2, h3, p{
+	font-family: 'Roboto', sans-serif;
+}
+
+#navText{
+	padding: 60px;
+}
+
+header img{
+}
+
+a {
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover{
+
+}
+
+h1{
+	margin-top: 0;
+}
+
+/************* Gallery *******************/
+
+.tile{
+	width: 300px;
+	height: 496px;
+	background-color: white;
+	border-radius: .3em;
+	margin: .5em;
+	display: inline-block;
+}
+
+.container{
+	text-align: center;
+}
+
+.tileContentTop{
+	border-bottom: solid #CCC 1px;
+}
+
+.tileContentTop h3{
+	font-family: 'Roboto', sans-serif;
+	color: #15C5F8;
+	margin: 0;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.tileContent{
+	font-family: 'Roboto', sans-serif;
+	float: left;
+	width: 100%;
+}
+
+.tileImage img{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	height: 200px;
+	max-width: 300px;
+	max-height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
