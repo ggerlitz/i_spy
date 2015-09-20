@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
  def index
   @posts = Post.last(10).reverse
+  @post = Post.all
  end
 
  def new
@@ -15,7 +16,7 @@ end
 
  def show
  	@user = current_user
-  @posts = Post.all
+  # @posts = Post.all
   @comment = Comment.new
  end
 

@@ -25,13 +25,7 @@
 
 	<div class="container">
 		
-		<%= render @posts %>
-
-		<div class="editPost">
-			<%if current_user and current_user.id == @post.user_id %>
-			<%= link_to 'Edit Post', edit_post_path(@post) %>
-			<%end%>
-		</div>
+		<%= render @post %>
 
 	</div>
 
