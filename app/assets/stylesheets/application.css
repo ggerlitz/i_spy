@@ -16,13 +16,41 @@
 
 body{
 	margin: 0 auto;
-	background-color: #7ECCC4;
+		background-attachment: fixed; 
+	background-image: url("background2.jpg");
 }
+
+body, html{
+	height: 100%;
+}
+
+.background{
+	background-attachment: fixed; 
+	background-image: url("background2.jpg");
+}
+
+/************** Welcome *****************/
+#welcomecenter{
+	text-align: center;
+	margin-top: 250px;
+}
+
+#welcome{
+	color: white;
+	font-size: 1.5em;
+	font-family: 'Roboto';
+}
+
+#welcome h3{
+	font-style: oblique;
+}
+/************** Welcome *****************/
 
 header{
 	width: 100%;
 	border-bottom: solid black 1px;
 	padding: .6em;
+	padding-bottom: 0;
 	background-color: white;
 }
 
@@ -33,12 +61,12 @@ nav{
 #logo{
 	display: inline-block;
 	margin: 0;
-	margin-top: .2em;
+	margin-top: .5em;
 }
 
 #navBar{
 	display: inline-block;
-	margin-top: 3.4em;
+	margin-top: 2em;
 	margin-right: 1em;
 	float: right;
 }
@@ -47,7 +75,11 @@ nav a{
 	letter-spacing: .1em;
 	padding-left: .4em;
 	text-decoration: none;
-	color: inherit;
+	color: #1D82E1;
+}
+
+nav a:hover{
+	color: #39CDFF;
 }
 
 h1, h2, h3, p{
@@ -77,6 +109,10 @@ h1{
 
 .notice{
 	float: left;
+}
+
+p{
+	color: black;
 }
 
 /************* Gallery *******************/
@@ -163,6 +199,7 @@ h1{
 }
 
 .newPost {
+	text-align: center;
 	width: 300px;
 	height: 496px;
 	background-color: white;
@@ -177,8 +214,105 @@ h1{
 	font-family: 'Roboto', sans-serif;
 }
 
+.cancelbutton{
+	font-size: 1.2em;
+}
+
+#loginSignup{
+	background-color: rgba(0,0,0,0.5);
+	padding: .1em;
+}
+
+#loginSignup h1{
+	font-size: 1em;
+	color: white;
+	margin: 0;
+}
+
+.notice{
+	font-size: 1em;
+	background-color: green;
+	color: white;
+	width: 100%;
+	margin: 0;
+}
+
 .newPost form{
 
+}
+
+/************* Form ***************/
+
+.form-style-6{
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 input[type="password"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 80%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 input[type="password"]:focus,
+
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+    box-shadow: 0 0 5px #1D82E1;
+    padding: 3%;
+    border: 1px solid #1D82E1;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #CCC;
+    border-bottom: 2px solid;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+    background: #1D82E1
 }
 
 

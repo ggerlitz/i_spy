@@ -1,33 +1,35 @@
-<%= form_for @user do |f| %>
-	
-	<p>
-		<%= f.label :fname, "First Name" %>
-		<%= f.text_field :fname %>
-	</p>
 
-	<p>
-		<%= f.label :lname, "Last Name" %>
-		<%= f.text_field :lname %>
-	</p>
 
-	<% if @user.new_record?%>
-	<p>
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-	</p>
-	<% end %>
+	<%= form_for @user do |f| %>
+		
+		<p>
+			<%= f.label :fname, "First Name" %>
+			<%= f.text_field :fname %>
+		</p>
 
-	<p>
-		<%= f.label :username %>
-		<%= f.text_field :username %>
-	</p>
+		<p>
+			<%= f.label :lname, "Last Name" %>
+			<%= f.text_field :lname %>
+		</p>
 
-	<p>
-		<%= f.label :email %>
-		<%= f.email_field :email %>
-	</p>
+		<% if @user.new_record?%>
+		<p>
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</p>
+		<% end %>
 
-	<p>
-		<%= f.submit @user.new_record? ? "sign up" : "edit account"%>
-	</p>
-<%end%>
+		<p>
+			<%= f.label :username %>
+			<%= f.text_field :username %>
+		</p>
+
+		<p>
+			<%= f.label :email %>
+			<%= f.email_field :email %>
+		</p>
+
+		<p>
+			<%= f.submit @user.new_record? ? "sign up" : "edit account"%>
+		</p>
+	<%end%>

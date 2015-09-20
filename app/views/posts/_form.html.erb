@@ -1,3 +1,5 @@
+<div class="form-style-6"> 
+
 <%= form_for @post, html: { multipart: true } do |f| %>
 	<p><%= f.label :title, "Upload an Image" %>
 		<%= f.file_field :avatar, required: true %>
@@ -12,3 +14,5 @@
 
   <p><%= f.submit %></p>
 <% end %>
+
+</div>
