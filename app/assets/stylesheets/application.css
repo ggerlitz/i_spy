@@ -227,14 +227,16 @@ p{
 	font-size: 1em;
 	color: white;
 	margin: 0;
+	padding: 0;
 }
 
 .notice{
-	font-size: 1em;
+	font-size: 1.2em;
 	background-color: green;
 	color: white;
 	width: 100%;
 	margin: 0;
+	padding: .2em;
 }
 
 .newPost form{
@@ -245,6 +247,7 @@ p{
 
 .form-style-6{
     font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 
 .form-style-6 input[type="text"],
