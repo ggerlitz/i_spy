@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :destroy, :update, :follow, :unfollow, :avatar]
-  before_action :authenticate_user!, only: [:profile, :destroy, :edit, :update, :follow, :unfollow, :avatar]
+  before_action :set_user, only: [:show, :profile, :edit, :destroy, :update, :avatar]
+  before_action :authenticate_user!, only: [:profile, :destroy, :edit, :update, :avatar]
   before_action :authorize_user, only: [:destroy, :edit, :update]
 
   def index
@@ -12,8 +12,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @posts = Post.all
-    @comment = Comment.all
   end
 
   def edit
@@ -21,6 +19,7 @@ class UsersController < ApplicationController
 
   def profile
     @user = current_user
+    @posts = Post.all
     render :show
   end  
 

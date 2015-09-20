@@ -1,0 +1,17 @@
+<div class="tile">
+	
+	<div class="container">
+		<div class="tileContentTop">
+			<h3>@<%= link_to post.user.username, post %></h3>
+		</div>
+		
+		<div class="tileImage">
+			<%= image_tag post.avatar.url(:medium) %>
+		</div>
+
+		<div class="tileContent">
+			<h4><%= post.title %></h4>
+			<p><%= post.body %></p>
+		</div>
+	</div>
+</div>

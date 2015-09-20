@@ -2,12 +2,12 @@
 	<p><%= f.label :title, "Upload an Image" %>
 		<%= f.file_field :avatar, required: true %>
 	</p>
-  <p><%= f.label :title %>
+  <p><%= f.label :title %><br>
       <%= f.text_field :title %>
   </p>
 
-  <p><%= f.label :body %>
-      <%= f.text_area :body %>
+  <p><%= f.label :body %><br>
+      <%= f.text_area :body, style:"width: 283px;", rows: 10, col: 50 %>
   </p>
 
   <p><%= f.submit %></p>

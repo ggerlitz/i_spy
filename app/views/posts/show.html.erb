@@ -45,13 +45,8 @@
 	</div>
 
 	<div class="comments">
-		<% if current_user != nil %>
-			<h3>New Comment</h3>
-			<%= form_for [@post, @comment] do |f| %>
-			    <%= f.text_area :body %><br>
-			    <%= f.submit %>
-			<%end%>
-		<% end %>   
+
+  
 	</div>
 
 </div>	
