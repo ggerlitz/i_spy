@@ -20,6 +20,11 @@
 			<%end%>
 		</div>		
 
+		<h6>Created <%= Time.now.day - post.updated_at.day%> days ago </h4>
+		<% if post.updated_at != post.created_at %>
+		<h6>Updated <%= Time.now.day - post.updated_at.day%> days ago </h4>
+		<% end %>
+
 	</div>
 
 </div>

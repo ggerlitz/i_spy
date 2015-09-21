@@ -37,7 +37,7 @@ end
  private
 
 	def posts_params
-		params.require(:post).permit(:body, :title, :avatar).merge(user: current_user)
+		params.require(:post).permit(:body, :title, :avatar, :created_at, :updated_at).merge(user: current_user)
 	end
 
   def set_post

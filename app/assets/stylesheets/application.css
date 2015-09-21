@@ -123,6 +123,7 @@ p{
 	background-color: white;
 	border-radius: .3em;
 	margin: .5em;
+	padding: 1em;
 	display: inline-block;
 }
 
@@ -182,6 +183,7 @@ p{
 	background-color: white;
 	border-radius: .3em;
 	margin: .5em;
+	padding: 1em;
 	display: inline-block;
 }
 
@@ -191,6 +193,7 @@ p{
 	background-color: white;
 	border-radius: .3em;	
 	margin: .5em;
+	padding: 1em;
 }
 
 .comments h3, form {
@@ -318,8 +321,33 @@ p{
     background: #1D82E1
 }
 
+/************* User#Index ***************/
 
+.userInfo {
+	width: 35%;
+	background-color: white;
+	border-radius: .3em;
+	display: inline-block;
+	margin: 0.5em;
+	margin-top: 2em;	
+	margin-left: 30em;
+}
 
+.userTile {
+	float: right;
+	font-family: 'Roboto';
+	width: 250px;
+}
+
+.userTile a {
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	color: #1D82E1;
+}
+
+#username {
+	color: #1D82E1;
+}
 
 
 

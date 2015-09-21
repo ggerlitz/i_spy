@@ -1,5 +1,10 @@
-<h1>List of Users</h1>
-
-<% @users.each do |user| %>
-	<%= link_to user.username, user_path(user.id)%>
-<%end%>
+	
+	<% @users.each do |user| %>
+	<div class="userInfo">	
+		<div class="userTile">
+			<p id="username">@<%= link_to user.username, user_path(user.id)%></p>
+			<p>Name: <%= user.fname %> <%= user.lname %></p>
+			<p>Email: <%= user.email %></p>
+		</div>
+	</div>
+	<%end%>
