@@ -1,36 +1,40 @@
 <div class="tile">
-	
-	<div class="container">
-		<div class="tileContentTop">
-			<h3>@<%= link_to post.user.username, post %></h3>
-		</div>
-		
-		<div class="tileImage">
-			<%= image_tag post.avatar.url(:medium) %>
-		</div>
+   
+ <div class="container">
+     <div class="tileContentTop">
+         <h3>@<%= link_to post.user.username, post %></h3>
+     </div>
+     
+     <div class="tileImage">
+         <%= image_tag post.avatar.url(:medium) %>
+     </div>
 
-		<div class="tileContent">
-			<h4><%= post.title %></h4>
-			<p><%= post.body %></p>
-		</div>
+     <div class="tileContent">
+         <h4><%= post.title %></h4>
+         <p><%= post.body %></p>
+     </div>
 
-		<div class="editPost">
-			<%if current_user and current_user.id == post.user_id %>
-			<%= link_to 'Edit Post', edit_post_path(post) %>
-			<%end%>
-		</div>		
+     <div class="editPost">
+         <%if current_user and current_user.id == post.user_id %>
+         <%= link_to 'Edit Post', edit_post_path(post) %>
+         <%end%>
+     </div>        
 
-		<% if 1 < Time.now.day - post.updated_at.day %>
-		<h6>Created <%= t= Time.now.day - post.updated_at.day%> days ago </h4>
-		<% else %>
-		<h6>Created <%= Time.now.day - post.updated_at.day%> day ago </h4>	
-		<% end %>
+     <div class="postCreateTime">
+         <% if 1 < Time.now.day - post.updated_at.day %>
+         <h6>Created <%= t= Time.now.day - post.updated_at.day%> days ago </h4>
+         <% else %>
+         <h6>Created <%= Time.now.day - post.updated_at.day%> day ago </h4>    
+         <% end %>
+     </div>
 
-		<% if post.updated_at != post.created_at %>
-		<h6>Updated <%= Time.now.day - post.updated_at.day%> days ago </h4>
-		<% end %>
+     <div class="postUpdateTime">
+         <% if post.updated_at != post.created_at %>
+         <h6>Updated <%= Time.now.day - post.updated_at.day%> days ago </h4>
+         <% end %>
+     </div>
 
-	</div>
+ </div>
 
 </div>
 
