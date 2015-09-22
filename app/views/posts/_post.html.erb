@@ -6,11 +6,11 @@
      </div>
      
      <div class="tileImage">
-         <%= image_tag post.avatar.url(:medium) %>
+         <%= link_to (image_tag post.avatar.url(:medium)),post %>
      </div>
 
      <div class="tileContent">
-         <h4><%= link_to post.title, post  %></h4>
+         <h4><%= post.title %></h4>
          <p><%= post.body %></p>
      </div>
 
