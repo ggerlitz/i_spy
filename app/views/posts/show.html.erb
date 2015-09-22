@@ -1,19 +1,54 @@
-<%= image_tag @post.avatar.url(:medium) %>
-<h1><%= @post.user.username %></h1>
-<h1><%= @post.title %></h1>
-<p><%= @post.body %></p>
 
-<% if current_user != nil %>
+<div class="masterside">
+
+	<div class="sidebar">
+
+			<div class="bio">
+
+				<div class="bioTop">
+					<p><%= @post.user.username %></p>
+				</div>
+
+				<div class="bioBottom">
+					<p><%= @post.user.fname %></p>
+					<p><%= @post.user.lname %></p>
+					<p><%= @post.user.email %></p>
+				</div>
+
+			</div>
+
+	</div>
+
+</div>
+
+<div class="main">
+
+	<div class="container">
+		
+		<%= render @post %>
+
+	</div>
+
+<div class="comments">
+	<% if current_user != nil %>
 	<h3>New Comment</h3>
 	<%= form_for [@post, @comment] do |f| %>
-	    <%= f.text_area :body %><br>
-	    <%= f.submit %>
+	   <%= f.text_area :body, style:"width: 283px;", rows: 10, col: 50 %><br>
+	   <%= f.submit %>
 	<%end%>
-<% end %>
+	<% end %>
 
 
-<h3>Comments</h3>
-<% @post.comments.each do |comment| %>
-    <p><%= comment.body %></p>
-    <hr>
-<% end %>
+	<h3>Comments</h3>
+	<% @post.comments.reverse.each do |comment| %>
+	    <p><%= comment.body %></p>
+	    <hr>
+	<% end %>
+</div>	
+
+</div>	
+
+
+
+
+

@@ -13,3 +13,405 @@
  *= require_tree .
  *= require_self
  */
+
+html { 
+  background: url("background2.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+	margin: 0 auto;
+}
+
+body, html{
+	height: 100%;
+}
+
+.background{
+	background-attachment: fixed; 
+	/*background-image: url("background2.jpg");*/
+}
+
+/************** Welcome *****************/
+#welcomecenter{
+	text-align: center;
+	margin-top: 250px;
+}
+
+#welcome{
+	color: white;
+	font-size: 1.5em;
+	font-family: 'Roboto';
+}
+
+#welcome h3{
+	font-style: oblique;
+}
+/************** Welcome *****************/
+
+header{
+	width: 100%;
+	border-bottom: solid black 1px;
+	padding: .6em;
+	padding-bottom: 0;
+	background-color: rgba(224,238,238,.4);
+}
+
+nav{
+	font-family: 'Roboto', sans-serif;
+}
+
+#logo{
+	display: inline-block;
+	margin: 0;
+	margin-top: .5em;
+}
+
+#navBar{
+	display: inline-block;
+	margin-top: 2em;
+	margin-right: 1em;
+	float: right;
+}
+
+nav a{
+	letter-spacing: .1em;
+	padding-left: .4em;
+	text-decoration: none;
+	color: #39CDFF;
+}
+
+nav a:hover{
+	color: #1D82E1;
+
+}
+
+h1, h2, h3, p{
+	font-family: 'Roboto', sans-serif;
+}
+
+#navText{
+	padding: 60px;
+}
+
+header img{
+}
+
+a {
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover{
+
+}
+
+h1{
+	margin-top: 0;
+}
+
+.notice{
+	float: left;
+}
+
+p{
+	color: black;
+}
+
+/************* Gallery *******************/
+
+.tile{
+	width: 300px;
+	height: 496px;
+	background-color: white;
+	border-radius: .3em;
+	margin: .5em;
+	padding: 1em;
+	float: left;
+}
+
+.postTile{
+	width: 300px;
+	height: 496px;
+	background-color: white;
+	border-radius: .3em;
+	margin: .5em;
+	margin-bottom: 4px;
+	display: inline-block;
+}
+
+.tileContainer{
+	text-align: center;
+}
+
+.tileContentTop{
+	border-bottom: solid #CCC 1px;
+}
+
+.tileContentTop h3{
+	font-family: 'Roboto', sans-serif;
+	color: #15C5F8;
+	margin: 0;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.tileContent{
+	font-family: 'Roboto', sans-serif;
+	color: #15C5F8;
+	float: left;
+	width: 100%;
+}
+
+.tileImage{
+	text-align: center;
+}
+
+.tileImage img{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	height: 200px;
+	max-width: 300px;
+	max-height: 100%;
+}
+
+.editPost {
+	color: #1D82E1;	
+}
+
+.postTimeInfo {
+	width: 100%;
+	height: 65px;
+	margin-top: 70px;
+	font-family: 'Roboto', sans-serif;	
+	font-size: 1.2em;
+}
+
+.postCreateTime {
+	float: left;
+	width: 45%;
+	margin-left: 10px;	
+}
+
+.postUpdateTime {
+	float: left;
+	width: 45%;
+	margin-left: 20px;
+}
+
+.main {
+	float: left;
+	margin-left: 8em;
+	width: 65%;
+}
+
+.masterside {
+	float: left;
+	margin-left: 1em;
+}
+
+.sidebar{
+	width: 300px;
+	height: 496px;
+	margin: .5em;
+	padding: 1em;	
+	display: inline-block;
+	text-align: center;
+}
+
+.bioTop, .bioBottom {
+	background-color: white;
+	border-radius: .3em;
+	margin: .5em;
+	padding: 1em;
+}
+
+.comments {	
+	width: 300px;
+	margin-left: 10px;	
+	background-color: white;
+	border-radius: .3em;	
+	margin: .5em;
+	padding: 1em;
+}
+
+.comments h3, form {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.newPost {
+	text-align: center;
+	width: 300px;
+	height: 496px;
+	background-color: white;
+	border-radius: .3em;
+	margin: .5em;
+	margin-left: 30em;
+	margin-top: 3em;
+}
+
+.newPost h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.cancelbutton{
+	font-size: 1.2em;
+}
+
+#loginSignup{
+	background-color: rgba(0,0,0,0.5);
+	padding: .1em;
+}
+
+#loginSignup h1{
+	font-size: 1em;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.notice{
+	font-size: 1.2em;
+	background-color: green;
+	color: white;
+	width: 100%;
+	margin: 0;
+	padding: .2em;
+}
+
+/************* New User Form ***************/
+
+.newPost{
+	text-align: center;
+}
+
+.new_user{
+	/*margin-top: 1em;*/
+}
+
+/************* Form ***************/
+
+
+/************* Log In ***************/
+
+.formBody{
+
+}
+
+/************* Log In ***************/
+
+.form-style-6{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 input[type="password"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+    outline: none;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 80%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 input[type="password"]:focus,
+
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+    box-shadow: 0 0 5px #1D82E1;
+    padding: 3%;
+    border: 1px solid #1D82E1;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 1.15em;
+    width: 100%;
+    padding: 3%;
+    background: #CCC;
+    border-bottom: 2px solid;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+    background: #1D82E1
+
+}
+
+/************* Form ***************/
+
+/************* User#Index ***************/
+
+.userInfo {
+	width: 35%;
+	background-color: white;
+	border-radius: .3em;
+	display: inline-block;
+	margin: 0.5em;
+	margin-top: 2em;	
+	margin-left: 30em;
+}
+
+.userTile {
+	float: right;
+	font-family: 'Roboto';
+	width: 250px;
+}
+
+.userTile a {
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	color: #1D82E1;
+}
+
+.username a, .username{
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	color: #39CDFF;
+}
+
+/************* User#Index ***************/
+
+
+
+
+

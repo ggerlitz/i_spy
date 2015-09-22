@@ -1,24 +1,45 @@
-<%= @user.fname %>
-<%= @user.lname %>
-<%= @user.email %>
-<%= @user.username %>
 
-<% if current_user and @user == current_user %>
-    <p><%= link_to "edit profile", edit_user_path(@user) %></p>
-<% end %>
+<div class="masterside">
 
-<br>
+	<div class="sidebar">
 
-<% if current_user and @user == current_user %>
-	<h3><%= link_to "Close Your Account", @user, method: :delete, data: {confirm: "Are you sure?"} %></h3>
-<% end %>
+			<div class="bio">
 
-<!-- Users Posts w/ Other Users Comments -->
-<h1> <%= @user.username %>'s Posts </h1>
-<ol>
-<% @user.posts.each do |post| %>
-  <li> <%= post.body %> </li>
-<%end%>
-</ol>
+				<div class="bioTop">
+					<h3 class="username">@<%= @user.username %></h3>
+				</div>
+
+				<div class="bioBottom">
+					<p>Name: <%= @user.fname %> <%= @user.lname %></p>
+					<p>Email: <%= @user.email %></p>
+				</div>
+
+			</div>
+
+	</div>
+
+</div>
+
+<div class="main">
+
+	<div class="container">
+		
+		<%= render @user.posts %>
+
+	</div>
+
+</div>	
+
+
+
+
+
+
+
+
+
+
+
+
 
 

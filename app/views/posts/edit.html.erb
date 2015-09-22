@@ -1,3 +1,18 @@
-<h1>Edit Post</h1>
-<p><%= render 'form' %></p>
-<%= link_to 'cancel', posts_path %>
+<div class="newPost">
+  <h1>Edit Post</h1>
+  <%= form_for @post, html: { multipart: true } do |f| %>
+  	<p><%= f.label :title, "Upload an Image" %>
+  		<%= f.file_field :avatar %>
+  	</p>
+    <p><%= f.label :title %><br>
+        <%= f.text_field :title %>
+    </p>
+
+    <p><%= f.label :body %><br>
+        <%= f.text_area :body, style:"width: 283px;", rows: 10, col: 50 %>
+    </p>
+
+    <p><%= f.submit %></p>
+  <% end %>
+  <div class="cancelbutton"> <%= link_to 'cancel', posts_path %> </div>
+</div>

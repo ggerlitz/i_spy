@@ -15,7 +15,7 @@ end
 
  def show
  	@user = current_user
-  @posts = Post.all
+  # @posts = Post.all
   @comment = Comment.new
  end
 
@@ -37,7 +37,7 @@ end
  private
 
 	def posts_params
-		params.require(:post).permit(:body, :title, :avatar).merge(user: current_user)
+		params.require(:post).permit(:body, :title, :avatar, :created_at, :updated_at).merge(user: current_user)
 	end
 
   def set_post
