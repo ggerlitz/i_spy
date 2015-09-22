@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
  def index
   @posts = Post.last(10).reverse
+  @user = User.all
  end
 
  def new
