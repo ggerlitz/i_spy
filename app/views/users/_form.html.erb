@@ -1,4 +1,4 @@
-
+<div class="form-style-6">
 
 	<%= form_for @user do |f| %>
 		
@@ -25,7 +25,7 @@
 		</p>
 
 		<p>
-			<%= f.label :email %>
+			<%= f.label :email %><br>
 			<%= f.email_field :email %>
 		</p>
 
@@ -33,3 +33,4 @@
 			<%= f.submit @user.new_record? ? "sign up" : "edit account"%>
 		</p>
 	<%end%>
+</div>
